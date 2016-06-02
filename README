@@ -2,9 +2,9 @@ heritage-loader
 =============
 **Fork of [legacy-loader](https://www.npmjs.com/package/legacy-loader) that works in Firefox 35+**
 
-[![Build Status](https://travis-ci.org/peerigon/heritage-loader.svg?branch=master)](https://travis-ci.org/peerigon/heritage-loader)
-[![Dependency Status](https://david-dm.org/peerigon/heritage-loader.svg)](https://david-dm.org/peerigon/heritage-loader)
-[![Coverage Status](https://img.shields.io/coveralls/peerigon/heritage-loader.svg)](https://coveralls.io/r/peerigon/heritage-loader?branch=master)
+[![Build Status](https://travis-ci.org/peerigon/legacy-loader.svg?branch=master)](https://travis-ci.org/peerigon/legacy-loader)
+[![Dependency Status](https://david-dm.org/peerigon/legacy-loader.svg)](https://david-dm.org/peerigon/legacy-loader)
+[![Coverage Status](https://img.shields.io/coveralls/peerigon/legacy-loader.svg)](https://coveralls.io/r/peerigon/legacy-loader?branch=master)
 
 Use this loader to cope with legacy scripts that extend the window object instead of using AMD or CommonJS.
 
@@ -13,7 +13,7 @@ Use this loader to cope with legacy scripts that extend the window object instea
 Installation
 ------------
 
-[![npm status](https://nodei.co/npm/heritage-loader.svg?downloads=true&stars=true)](https://npmjs.org/package/heritage-loader)
+[![npm status](https://nodei.co/npm/legacy-loader.svg?downloads=true&stars=true)](https://npmjs.org/package/legacy-loader)
 
 <br />
 
@@ -30,7 +30,7 @@ window.someLegacyScript = function () {
 };
 ```
 
-Now just run `npm i heritage-loader --save` and configure your `webpack.config.js` like this
+Now just run `npm i legacy-loader --save` and configure your `webpack.config.js` like this
 
 ```javascript
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
         loaders: [
             {
                 test: /[\/\\]node_modules[\/\\]some-legacy-script[\/\\]index\.js$/,
-                loader: "heritage"
+                loader: "legacy"
             }
         ]
     }
@@ -56,7 +56,7 @@ window.someLegacyScript; // undefined
 
 ### Auto export
 
-The **heritage-loader** exports a single value via `module.exports` when your legacy script did only add one
+The **legacy-loader** exports a single value via `module.exports` when your legacy script did only add one
 property to the window object. If it added two or more, an object is returned instead:
 
 ```javascript
@@ -89,7 +89,7 @@ you can also pass a property name:
     ...
     {
         test: /[\/\\]node_modules[\/\\]some-legacy-script[\/\\]index\.js$/,
-        loader: "heritage?exports=propertyA"
+        loader: "legacy?exports=propertyA"
     }
     ...
 ```
@@ -115,7 +115,7 @@ you can decide to publish a single property back to the window object.
     ...
     {
         test: /[\/\\]node_modules[\/\\]some-legacy-script[\/\\]index\.js$/,
-        loader: "heritage?publish=propertyB"
+        loader: "legacy?publish=propertyB"
     }
     ...
 ```

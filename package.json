@@ -1,48 +1,14 @@
 {
-  "_args": [
-    [
-      "legacy-loader",
-      "/media/strochkov/hddwork500/PROJECTS/rebel-tuna"
-    ]
-  ],
-  "_from": "legacy-loader@latest",
-  "_id": "legacy-loader@0.0.2",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/legacy-loader",
-  "_npmUser": {
-    "email": "developers@peerigon.com",
-    "name": "peerigon"
-  },
-  "_npmVersion": "1.4.28",
-  "_phantomChildren": {
-    "amdefine": "1.0.0"
-  },
-  "_requested": {
-    "name": "legacy-loader",
-    "raw": "legacy-loader",
-    "rawSpec": "",
-    "scope": null,
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/legacy-loader/-/legacy-loader-0.0.2.tgz",
-  "_shasum": "884559006215eaeaa50558d709b4a66e6730dc4e",
-  "_shrinkwrap": null,
-  "_spec": "legacy-loader",
-  "_where": "/media/strochkov/hddwork500/PROJECTS/rebel-tuna",
   "author": {
-    "email": "developers@peerigon.com",
-    "name": "peerigon"
+    "email": "strochkov@gmail.com",
+    "name": "strochkov"
   },
   "bugs": {
-    "url": "https://github.com/peerigon/legacy-loader/issues"
+    "url": "https://github.com/strochkov/heritage-loader/issues"
   },
   "dependencies": {
     "loader-utils": "^0.2.6",
+    "lodash.difference": "^4.3.0",
     "source-map": "^0.3.0"
   },
   "description": "Webpack loader that prevents scripts from extending the window object",
@@ -54,12 +20,7 @@
     "webpack": "^1.5.3"
   },
   "directories": {},
-  "dist": {
-    "shasum": "884559006215eaeaa50558d709b4a66e6730dc4e",
-    "tarball": "https://registry.npmjs.org/legacy-loader/-/legacy-loader-0.0.2.tgz"
-  },
-  "gitHead": "e919909ab71c3e37993ed2337ebe6cc5701fe49b",
-  "homepage": "https://github.com/peerigon/legacy-loader",
+  "homepage": "https://github.com/strochkov/heritage-loader",
   "keywords": [
     "webpack",
     "loader",
@@ -71,20 +32,15 @@
   "main": "./lib/index.js",
   "maintainers": [
     {
-      "email": "developers@peerigon.com",
-      "name": "peerigon"
+      "email": "strochkov@gmail.com",
+      "name": "strochkov"
     }
   ],
-  "name": "legacy-loader",
+  "name": "heritage-loader",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peerigon/legacy-loader.git"
-  },
   "scripts": {
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "test": "mocha -R spec"
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
